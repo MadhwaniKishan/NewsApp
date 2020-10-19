@@ -94,8 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget getItem(Article article) {
-    final int days =
-        Utility.getDifferenceInDaysFromToday(article.publishedAt);
+    final int days = Utility.getDifferenceInDaysFromToday(article.publishedAt);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -115,6 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text(days.toString() + " days ago"),
           ),
           Text(article.sourceName),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: Text(
+              article.description,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
             child: article.urlToImage != null
