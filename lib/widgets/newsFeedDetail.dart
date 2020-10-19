@@ -31,7 +31,9 @@ class NewsFeedDetail extends StatelessWidget {
                 ),
               ),
               Text(
-                _article.author + " | " + _formattedDate,
+                (_article.author != null ? _article.author : "Annonymus ") +
+                    " | " +
+                    _formattedDate,
                 style: TextStyle(fontSize: 16),
               ),
               Padding(

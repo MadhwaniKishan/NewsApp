@@ -7,7 +7,7 @@ import 'package:flutter_news_app/bloc/state.dart';
 import 'package:flutter_news_app/utility/utilityClass.dart';
 import 'package:flutter_news_app/widgets/newsFeedDetail.dart';
 
-import '../model/article.dart';
+import 'model/article.dart';
 
 void main() {
   runApp(MyApp());
